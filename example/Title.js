@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Title = props => {
-  return 'title'
+  return 'title is this'
 }
 
 Title.propTypes = {}
