@@ -1,9 +1,11 @@
 {
-  "name": "react-scoped-css",
+  "name": "babel-plugin-react-scoped-css",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "prebuild": "rm -rf dist",
+    "prebabel": "rm -rf dist/example",
+    "babel": "babel example --out-dir dist/example",
     "build": "webpack"
   },
   "license": "MIT",

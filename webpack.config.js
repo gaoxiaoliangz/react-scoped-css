@@ -23,9 +23,6 @@ module.exports = {
         test: /\.(js|mjs|jsx)$/,
         loader: require.resolve('babel-loader'),
         include: path.join(__dirname, './example'),
-        options: {
-          plugins: [require.resolve('react-scoped-css')],
-        },
       },
     ],
   },
