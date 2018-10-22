@@ -1,27 +1,16 @@
 import React from 'react'
-import './Title.scoped.css?scopeId=123'
+import SubTitle from './SubTitle'
+import './Title.scoped.css'
 
-// const SubTitle = props => {
-//   return (
-//     <div className="title" width="100">
-//       <span className="title" width="100" />
-//       <i />
-//       title
-//     </div>
-//   )
-// }
-
-// const Title = props => {
-//   return (
-//     <div className="title" width="100">
-//       <div className="title" width="100" />
-//       <SubTitle />
-//       title
-//     </div>
-//   )
-// }
-
-const Title = {}
+const Title = props => {
+  return (
+    <div className="title" width="100">
+      <div className="title" width="100" />
+      {props.content}
+      <SubTitle />
+    </div>
+  )
+}
 
 Title.propTypes = {}
 

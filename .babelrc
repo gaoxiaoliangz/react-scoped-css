@@ -1,3 +1,4 @@
 {
+  "presets": ["@babel/preset-react"],
   "plugins": ["babel-plugin-react-scoped-css"]
 }

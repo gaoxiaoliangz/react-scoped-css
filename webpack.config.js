@@ -27,9 +27,6 @@ module.exports = {
       {
         test: /\.css$/,
         loader: path.resolve('./loaders/css.js'),
-        options: {
-          hehe: 1,
-        },
       },
     ],
   },
