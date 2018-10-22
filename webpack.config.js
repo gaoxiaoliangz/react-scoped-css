@@ -24,6 +24,16 @@ module.exports = {
         loader: require.resolve('babel-loader'),
         include: path.join(__dirname, './example'),
       },
+      {
+        test: /\.css$/,
+        loader: path.resolve('./loaders/css.js'),
+        options: {
+          hehe: 1,
+        },
+      },
     ],
+  },
+  resolveLoader: {
+    modules: ['node_modules', path.resolve(__dirname, 'loaders')],
   },
 }
