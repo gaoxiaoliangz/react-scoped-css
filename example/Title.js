@@ -2,12 +2,11 @@ import React from 'react'
 import SubTitle from './SubTitle'
 import './Title.scoped.css'
 
-const Title = props => {
+const Title = ({ subTitle, children }) => {
   return (
-    <div className="title" width="100">
-      <div className="title" width="100" />
-      {props.content}
-      <SubTitle />
+    <div className="title">
+      <p>{children}</p>
+      <SubTitle>{subTitle}</SubTitle>
     </div>
   )
 }

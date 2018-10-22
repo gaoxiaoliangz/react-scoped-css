@@ -3,9 +3,9 @@ import './SubTitle.scoped.css'
 
 const SubTitle = props => {
   return (
-    <div className="sub-title">
+    <div className="title">
       <i />
-      <p>{props.content}</p>
+      <p>{props.children}</p>
     </div>
   )
 }

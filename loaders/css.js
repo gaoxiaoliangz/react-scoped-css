@@ -1,6 +1,7 @@
 // @ts-check
 const { getOptions } = require('loader-utils')
 const validateOptions = require('schema-utils')
+const { compileStyle } = require('@vue/component-compiler-utils')
 const qs = require('qs')
 
 const schema = {
@@ -16,6 +17,7 @@ module.exports = function(source, ...args) {
   // console.log(Object.keys(this))
   // console.log(this.query)
   // console.log(this.resource.)
+  // console.log('source', source)
 
   // @ts-ignore
   const resourceQuery = qs.parse(this.resource.split('?')[1])
@@ -29,5 +31,20 @@ module.exports = function(source, ...args) {
 
   // Apply some transformations to the source...
 
-  return `export default ${JSON.stringify(source)}`
+  // return `export default ${JSON.stringify(source)}`
+
+  const { code, map, errors } = compileStyle({
+    source,
+    // @ts-ignore
+    filename: this.resource,
+    id: `data-v-${resourceQuery.scopeId}`,
+    // map: inMap,
+    scoped: true,
+    trim: true,
+  })
+  if (errors.length) {
+    console.log(errors[0])
+  }
+  console.log(code)
+  return code
 }
