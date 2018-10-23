@@ -22,7 +22,9 @@
     "@babel/core": "^7.1.2",
     "babel-loader": "^8.0.4",
     "css-loader": "^1.0.0",
-    "style-loader": "^0.23.1"
+    "style-loader": "^0.23.1",
+    "babel-plugin-react-scoped-css": "0.0.1",
+    "scoped-css-loader": "0.0.1"
   },
   "license": "MIT"
 }

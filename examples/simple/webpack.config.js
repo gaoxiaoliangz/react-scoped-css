@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    main: './example/index.js',
+    main: './src/index.js',
   },
   mode: 'development',
   // optimization: {
@@ -22,19 +22,20 @@ module.exports = {
       {
         test: /\.(js|mjs|jsx)$/,
         loader: require.resolve('babel-loader'),
-        include: path.join(__dirname, './example'),
+        include: path.join(__dirname, './src'),
       },
       {
         test: /\.css$/,
         use: [
           { loader: 'style-loader' },
           { loader: 'css-loader' },
-          { loader: path.resolve('./loaders/css.js') },
+          { loader: 'scoped-css-loader' },
+          // { loader: path.resolve('./loaders/css.js') },
         ],
       },
     ],
   },
-  resolveLoader: {
-    modules: ['node_modules', path.resolve(__dirname, 'loaders')],
-  },
+  // resolveLoader: {
+  //   modules: ['node_modules', path.resolve(__dirname, 'loaders')],
+  // },
 }

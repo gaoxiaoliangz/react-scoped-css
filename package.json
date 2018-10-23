@@ -2,6 +2,9 @@
   "name": "babel-plugin-react-scoped-css",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "linkDeps": "lerna link --force-local"
+  },
   "devDependencies": {
     "lerna": "^3.4.3"
   }
