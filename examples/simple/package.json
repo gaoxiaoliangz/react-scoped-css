@@ -2,6 +2,7 @@
   "name": "simple",
   "version": "0.1.0",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "start": "webpack-dev-server",
     "prebuild:es": "rm -rf dist/es",
