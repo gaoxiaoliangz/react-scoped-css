@@ -13,12 +13,7 @@ const schema = {
   },
 }
 
-module.exports = function(source, ...args) {
-  // console.log(Object.keys(this))
-  // console.log(this.query)
-  // console.log(this.resource.)
-  // console.log('source', source)
-
+module.exports = function(source) {
   // @ts-ignore
   const resourceQuery = qs.parse(this.resource.split('?')[1])
   console.log(resourceQuery.scopeId)
@@ -45,6 +40,5 @@ module.exports = function(source, ...args) {
   if (errors.length) {
     console.log(errors[0])
   }
-  console.log(code)
   return code
 }

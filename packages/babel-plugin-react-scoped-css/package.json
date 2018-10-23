@@ -1,0 +1,13 @@
+{
+  "name": "babel-plugin-react-scoped-css",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/plugin-syntax-jsx": "^7.0.0",
+    "md5": "^2.2.1"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.1.3"
+  }
+}

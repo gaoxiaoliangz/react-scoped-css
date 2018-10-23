@@ -2,34 +2,8 @@
   "name": "babel-plugin-react-scoped-css",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "prebuild": "rm -rf dist",
-    "prebabel": "rm -rf dist/example",
-    "babel": "babel example --out-dir dist/example",
-    "build": "webpack"
-  },
   "license": "MIT",
-  "dependencies": {
-    "@babel/plugin-syntax-jsx": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/types": "^7.1.3",
-    "@vue/component-compiler-utils": "^2.2.0",
-    "loader-utils": "^1.1.0",
-    "md5": "^2.2.1",
-    "qs": "^6.5.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "schema-utils": "^1.0.0",
-    "webpack": "^4.21.0",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
-  },
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "babel-loader": "^8.0.4",
-    "css-loader": "^1.0.0",
-    "style-loader": "^0.23.1"
+    "lerna": "^3.4.3"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "name": "scoped-css-loader",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@vue/component-compiler-utils": "^2.2.0",
+    "loader-utils": "^1.1.0",
+    "schema-utils": "^1.0.0",
+    "qs": "^6.5.2"
+  }
+}
