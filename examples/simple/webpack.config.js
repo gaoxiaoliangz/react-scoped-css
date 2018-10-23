@@ -20,6 +20,7 @@ module.exports = {
   //   // https://twitter.com/wSokra/status/969679223278505985
   //   runtimeChunk: true,
   // },
+  devtool: 'sourcemap',
   module: {
     rules: [
       {
@@ -30,10 +31,20 @@ module.exports = {
       {
         test: /\.(s)?css$/,
         use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 2,
+            },
+          },
           { loader: 'scoped-css-loader' },
-          { loader: 'sass-loader' },
+          {
+            loader: 'sass-loader',
+          },
         ],
       },
     ],

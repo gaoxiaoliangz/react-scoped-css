@@ -1,8 +1,6 @@
 // @ts-check
 const babelPluginJsxSyntax = require('@babel/plugin-syntax-jsx').default
 const md5 = require('md5')
-const fsPath = require('path')
-// const types = require('@babel/types')
 
 const forPlugin = (path, stats) => {
   let { include: includeRegExp } = stats.opts
@@ -37,7 +35,6 @@ module.exports = function({ types: t }) {
         if (!this.hasScopedCss) {
           return
         }
-        // 判断是否是 html 标签（以小写字母开头）
         if (t.react.isCompatTag(path.node.openingElement.name.name)) {
           const hash = computeHash(stats.file.opts.filename)
           path.node.openingElement.attributes.push(
