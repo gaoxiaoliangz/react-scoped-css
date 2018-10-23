@@ -5,6 +5,7 @@
   "scripts": {
     "linkDeps": "lerna link --force-local"
   },
+  "repository": "https://github.com/gaoxiaoliangz/react-scoped-css",
   "devDependencies": {
     "lerna": "^3.4.3"
   }

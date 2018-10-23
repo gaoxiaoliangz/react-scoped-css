@@ -7,6 +7,7 @@
     "@babel/plugin-syntax-jsx": "^7.0.0",
     "md5": "^2.2.1"
   },
+  "repository": "https://github.com/gaoxiaoliangz/react-scoped-css",
   "devDependencies": {
     "@babel/types": "^7.1.3"
   },

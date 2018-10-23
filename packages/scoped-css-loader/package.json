@@ -9,6 +9,7 @@
     "qs": "^6.5.2",
     "schema-utils": "^1.0.0"
   },
+  "repository": "https://github.com/gaoxiaoliangz/react-scoped-css",
   "keywords": [
     "styles",
     "react",
