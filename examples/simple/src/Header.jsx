@@ -1,7 +1,7 @@
 // @ts-check
 import React from 'react'
 import Title from './Title'
-import './Header.scoped.css'
+import './Header.scoped.scss'
 
 const Header = ({ title, children }) => {
   return (

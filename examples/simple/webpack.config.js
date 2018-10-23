@@ -28,19 +28,16 @@ module.exports = {
         include: path.join(__dirname, 'src'),
       },
       {
-        test: /\.css$/,
+        test: /\.(s)?css$/,
         use: [
           { loader: 'style-loader' },
           { loader: 'css-loader' },
           { loader: 'scoped-css-loader' },
-          // { loader: path.resolve('./loaders/css.js') },
+          { loader: 'sass-loader' },
         ],
       },
     ],
   },
-  // resolveLoader: {
-  //   modules: ['node_modules', path.resolve(__dirname, 'loaders')],
-  // },
   resolve: {
     extensions: ['.wasm', '.mjs', '.js', '.json', '.jsx'],
   },
