@@ -4,6 +4,9 @@ module.exports = {
   entry: {
     main: './src/index.js',
   },
+  output: {
+    path: path.join(__dirname, 'dist/app'),
+  },
   mode: 'development',
   // optimization: {
   //   // Automatically split vendor and commons
@@ -22,7 +25,7 @@ module.exports = {
       {
         test: /\.(js|mjs|jsx)$/,
         loader: require.resolve('babel-loader'),
-        include: path.join(__dirname, './src'),
+        include: path.join(__dirname, 'src'),
       },
       {
         test: /\.css$/,
