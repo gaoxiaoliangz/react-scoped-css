@@ -1,7 +1,7 @@
 .title {
-  border-bottom: 1px solid #ddd;
+  background: #999;
 }
 
 p {
-  color: #666;
+  color: #ddd;
 }

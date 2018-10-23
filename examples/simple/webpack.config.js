@@ -41,4 +41,7 @@ module.exports = {
   // resolveLoader: {
   //   modules: ['node_modules', path.resolve(__dirname, 'loaders')],
   // },
+  resolve: {
+    extensions: ['.wasm', '.mjs', '.js', '.json', '.jsx'],
+  },
 }
