@@ -1,7 +1,7 @@
 .header {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #222;
 }
 
 p {
-  color: #666;
+  color: rgba(17, 81, 201, 0.74);
 }

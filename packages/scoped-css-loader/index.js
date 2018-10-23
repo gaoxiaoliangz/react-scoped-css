@@ -28,17 +28,20 @@ module.exports = function(source) {
 
   // return `export default ${JSON.stringify(source)}`
 
-  const { code, map, errors } = compileStyle({
-    source,
-    // @ts-ignore
-    filename: this.resource,
-    id: `data-v-${resourceQuery.scopeId}`,
-    // map: inMap,
-    scoped: true,
-    trim: true,
-  })
-  if (errors.length) {
-    console.log(errors[0])
+  if (resourceQuery.scopeId) {
+    const { code, map, errors } = compileStyle({
+      source,
+      // @ts-ignore
+      filename: this.resource,
+      id: `data-v-${resourceQuery.scopeId}`,
+      // map: inMap,
+      scoped: true,
+      trim: true,
+    })
+    if (errors.length) {
+      console.log(errors[0])
+    }
+    return code
   }
-  return code
+  return source
 }
