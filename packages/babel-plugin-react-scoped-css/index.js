@@ -15,6 +15,7 @@ const forPlugin = (path, stats) => {
 
 // @todo
 // 每次需要输出一致的 hash，不同机器上
+// 
 const computeHash = filePath => md5(filePath).substr(0, 8)
 
 module.exports = function({ types: t }) {

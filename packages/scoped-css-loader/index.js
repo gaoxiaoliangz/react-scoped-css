@@ -5,6 +5,7 @@ const qs = require('qs')
 module.exports = function(source) {
   // @ts-ignore
   const resourceQuery = qs.parse(this.resource.split('?')[1])
+
   if (resourceQuery.scopeId) {
     const { code, map, errors } = compileStyle({
       source,
