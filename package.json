@@ -3,7 +3,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "linkDeps": "lerna link --force-local"
+    "linkDeps": "lerna link --force-local",
+    "start": "cd examples/simple && npm start"
   },
   "repository": "https://github.com/gaoxiaoliangz/react-scoped-css",
   "devDependencies": {
