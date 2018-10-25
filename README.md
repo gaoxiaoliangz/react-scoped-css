@@ -1,6 +1,6 @@
 # React scoped CSS
 
-> CSS encapsulation solution for React
+CSS encapsulation solution for React
 
 ## Why
 
@@ -90,6 +90,6 @@ export default Title
 
 Then, in the html, component with scoped css file imported has a unique `data-v-<hash>` attribute on the html element tag, and the css selector also has a corresponding hash like `selector[data-v-<hash>]`.
 
-## Styling components
+## Some common use cases with scoped css
 
-Docs coming soon...
+Check out [simple-scoped-css-example](https://github.com/gaoxiaoliangz/react-scoped-css/tree/master/examples/simple)
