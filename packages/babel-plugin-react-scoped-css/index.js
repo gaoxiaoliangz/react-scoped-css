@@ -47,15 +47,18 @@ module.exports = function({ types: t }) {
         path.node.source.value = `${path.node.source.value}?scopeId=${hash}`
       },
       JSXElement(path, stats) {
-        if (!this.hasScopedCss) {
+        if (
+          !this.hasScopedCss ||
+          path.node.openingElement.name.type === 'JSXMemberExpression'
+        ) {
           return
         }
         const hash = computeHash(stats.file.opts.filename)
         path.node.openingElement.attributes.push(
           t.jsxAttribute(
             t.jsxIdentifier(`data-v-${hash}`),
-            t.jsxExpressionContainer(t.stringLiteral(''))
-          )
+            t.jsxExpressionContainer(t.stringLiteral('')),
+          ),
         )
       },
     },

@@ -14,8 +14,13 @@ const Content = props => {
       <h3>Style html tags</h3>
       <p>p tag with style</p>
 
-      <hr />
-      <h3>The normal use case</h3>
+      <React.Fragment>
+        <div>
+          <p>content wrapped with React Fragment should be fine</p>
+        </div>
+      </React.Fragment>
+
+      <h3>The normally with classes</h3>
       <div className="grid" />
       <div className="grid" />
 
