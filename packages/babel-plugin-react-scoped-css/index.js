@@ -50,15 +50,13 @@ module.exports = function({ types: t }) {
         if (!this.hasScopedCss) {
           return
         }
-        if (t.react.isCompatTag(path.node.openingElement.name.name)) {
-          const hash = computeHash(stats.file.opts.filename)
-          path.node.openingElement.attributes.push(
-            t.jsxAttribute(
-              t.jsxIdentifier(`data-v-${hash}`),
-              t.jsxExpressionContainer(t.stringLiteral(''))
-            )
+        const hash = computeHash(stats.file.opts.filename)
+        path.node.openingElement.attributes.push(
+          t.jsxAttribute(
+            t.jsxIdentifier(`data-v-${hash}`),
+            t.jsxExpressionContainer(t.stringLiteral(''))
           )
-        }
+        )
       },
     },
   }
