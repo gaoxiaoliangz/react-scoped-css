@@ -90,6 +90,27 @@ export default Title
 
 Then, in the html, component with scoped css file imported has a unique `data-v-<hash>` attribute on the html element tag, and the css selector also has a corresponding hash like `selector[data-v-<hash>]`.
 
-## Some common use cases with scoped css
+## Some common use cases with react scoped css
 
 Check out [simple-scoped-css-example](https://github.com/gaoxiaoliangz/react-scoped-css/tree/master/examples/simple)
+
+## Use scoped css in create react app
+
+Due to the fact that create react app doesn't allow user to modify the config of webpack or babel, I created my own fork of a configurable version of it. You can find it [here](https://github.com/gaoxiaoliangz/create-react-app/tree/master/packages/react-scripts).
+
+### Use in a new create-react-app project
+
+```
+create-react-app app_name --scripts-version=@gxl/react-scripts
+```
+
+and you are good to go, react scoped css is supported by default
+
+### Use in an existing create-react-app project (which hasn't been ejected yet)
+
+```
+npm install @gxl/react-scripts --save-dev
+npm remove react-scripts
+```
+
+and next time you start your project you're bootstrapping from @gxl/react-scripts
