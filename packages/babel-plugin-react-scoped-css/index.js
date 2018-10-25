@@ -2,21 +2,36 @@
 const babelPluginJsxSyntax = require('@babel/plugin-syntax-jsx').default
 const md5 = require('md5')
 
+const getFilenameFromPath = filePath => {
+  const parts = filePath.split('/')
+  return parts[parts.length - 1].split('?')[0]
+}
+
 const forPlugin = (path, stats) => {
   let { include: includeRegExp } = stats.opts
   if (!includeRegExp) {
     includeRegExp = /\.scoped\.(s)?css$/
   }
-  const importPath = path.node.source.value
-  const parts = importPath.split('/')
-  const filename = parts[parts.length - 1].split('?')[0]
+  const filename = getFilenameFromPath(path.node.source.value)
   return filename.match(new RegExp(includeRegExp))
 }
 
-// @todo: 每次需要输出一致的 hash，不同机器上
-const computeHash = filePath => md5(filePath).substr(0, 8)
-
 module.exports = function({ types: t }) {
+  const computedHash = {}
+  let lastHash = ''
+
+  const computeHash = filePath => {
+    if (computedHash[filePath]) {
+      return computedHash[filePath]
+    }
+
+    const filename = getFilenameFromPath(filePath)
+    const hash = md5(filename + lastHash).substr(0, 8)
+    computedHash[filePath] = hash
+    lastHash = hash
+    return hash
+  }
+
   return {
     inherits: babelPluginJsxSyntax,
     pre() {
