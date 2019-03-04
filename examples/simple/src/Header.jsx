@@ -1,6 +1,6 @@
 // @ts-check
 import React from 'react'
-import './Header.scoped.scss'
+import './Header.scoped.sass'
 
 const Header = ({ title }) => {
   return (
