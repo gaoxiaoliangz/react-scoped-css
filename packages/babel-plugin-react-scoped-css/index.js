@@ -10,7 +10,7 @@ const getFilenameFromPath = filePath => {
 const forPlugin = (path, stats) => {
   let { include: includeRegExp } = stats.opts
   if (!includeRegExp) {
-    includeRegExp = /\.scoped\.(s)?css$/
+    includeRegExp = /\.scoped\.(sa|sc|c)ss$/
   }
   const filename = getFilenameFromPath(path.node.source.value)
   return filename.match(new RegExp(includeRegExp))
