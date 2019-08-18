@@ -1,12 +1,12 @@
 {
   "name": "craco-plugin-scoped-css",
-  "version": "0.1.0",
+  "version": "0.3.3",
   "main": "index.js",
   "license": "MIT",
   "repository": "https://github.com/gaoxiaoliangz/react-scoped-css",
   "dependencies": {
-    "babel-plugin-react-scoped-css": "0.3.2",
-    "scoped-css-loader": "0.3.1"
+    "babel-plugin-react-scoped-css": "^0.3.3",
+    "scoped-css-loader": "^0.3.3"
   },
   "devDependencies": {
     "@babel/types": "^7.1.3",

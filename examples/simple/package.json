@@ -1,6 +1,6 @@
 {
   "name": "simple",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "main": "index.js",
   "private": true,
   "scripts": {
@@ -21,11 +21,11 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
-    "babel-plugin-react-scoped-css": "^0.3.2",
+    "babel-plugin-react-scoped-css": "^0.3.3",
     "css-loader": "^1.0.0",
     "node-sass": "^4.9.4",
     "sass-loader": "^7.1.0",
-    "scoped-css-loader": "^0.3.1",
+    "scoped-css-loader": "^0.3.3",
     "style-loader": "^0.23.1",
     "webpack": "^4.21.0",
     "webpack-cli": "^3.1.2",
