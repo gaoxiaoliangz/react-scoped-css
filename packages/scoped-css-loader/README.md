@@ -22,6 +22,19 @@ and in your babelrc add
 "plugins": ["babel-plugin-react-scoped-css"]
 ```
 
+also note that you can define your own matching rule like this
+
+```json
+"plugins": [
+  [
+    "babel-plugin-react-scoped-css",
+    {
+      "include": ".local.(sa|sc|c)ss$"
+    }
+  ]
+]
+```
+
 If you have other plugins installed, just add it to the list, order doesn't matter.
 
 Note: this plugin accepts `include`(RegExp, which defaults to `/\.scoped\.(s)?css$/`) to config which css file to be identified as scoped.
@@ -36,7 +49,7 @@ and in your webpack.config.js
 
 ```js
 {
-  test: /\.(s)?css$/,
+  test: /\.(sc|c|sa)ss$/,
   use: [
     {
       loader: 'style-loader',
