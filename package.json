@@ -1,14 +1,17 @@
 {
   "name": "babel-plugin-react-scoped-css",
-  "main": "index.js",
   "license": "MIT",
+  "private": true,
   "scripts": {
-    "linkDeps": "lerna link --force-local",
     "start": "cd examples/simple && npm start",
     "pub": "yarn lerna publish"
   },
   "repository": "https://github.com/gaoxiaoliangz/react-scoped-css",
   "devDependencies": {
-    "lerna": "^3.4.3"
-  }
+    "lerna": "^3.16.4"
+  },
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ]
 }
