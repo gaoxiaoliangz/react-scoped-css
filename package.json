@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "linkDeps": "lerna link --force-local",
-    "start": "cd examples/simple && npm start"
+    "start": "cd examples/simple && npm start",
+    "pub": "yarn lerna publish"
   },
   "repository": "https://github.com/gaoxiaoliangz/react-scoped-css",
   "devDependencies": {
