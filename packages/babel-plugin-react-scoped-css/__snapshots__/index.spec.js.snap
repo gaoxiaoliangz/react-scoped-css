@@ -13,7 +13,9 @@ const Frag = () => {
         <div data-v-706f09b9={\\"\\"}>text</div>
       </>
     </div>;
-};"
+};
+
+export default Frag;"
 `;
 
 exports[`babel-plugin-react-scoped-css from-example.jsx 1`] = `

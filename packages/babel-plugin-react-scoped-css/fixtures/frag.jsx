@@ -13,3 +13,5 @@ const Frag = () => {
     </div>
   )
 }
+
+export default Frag
