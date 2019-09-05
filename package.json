@@ -4,10 +4,14 @@
   "private": true,
   "scripts": {
     "start": "cd examples/simple && npm start",
-    "pub": "yarn lerna publish"
+    "pub": "yarn lerna publish",
+    "test": "jest",
+    "test:update-snapshot": "jest --updateSnapshot",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand"
   },
   "repository": "https://github.com/gaoxiaoliangz/react-scoped-css",
   "devDependencies": {
+    "jest": "^24.9.0",
     "lerna": "^3.16.4"
   },
   "workspaces": [
