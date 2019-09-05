@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`scoped-css-loader with scopeId content.scss 1`] = `
+".content[data-v-5ba844caf55f31c4e54177c142b37c6c] .grid {
+  margin-right: 5px;
+}
+.text[data-v-5ba844caf55f31c4e54177c142b37c6c] {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+.grid-layout[data-v-5ba844caf55f31c4e54177c142b37c6c] {
+  margin-right: 5px;
+}
+.grid[data-v-5ba844caf55f31c4e54177c142b37c6c] {
+  margin-right: 5px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: rgb(48, 157, 207);
+}
+p[data-v-5ba844caf55f31c4e54177c142b37c6c] {
+  color: #666;
+  font-style: italic;
+  font-weight: bold;
+  border-bottom: 2px solid #222;
+  display: inline-block;
+  margin: 0;
+}
+"
+`;
+
+exports[`scoped-css-loader with scopeId style.scss 1`] = `
+"html[data-v-f75cdbcea8034badbb1b7f8097fcb138] {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p[data-v-f75cdbcea8034badbb1b7f8097fcb138] {
+  color: #666;
+}
+"
+`;
+
+exports[`scoped-css-loader without scopeId content.scss 1`] = `
+".content /deep/ .grid {
+  margin-right: 5px;
+}
+
+.text {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.grid-layout {
+  margin-right: 5px;
+}
+
+.grid {
+  margin-right: 5px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: rgb(48, 157, 207);
+}
+
+p {
+  color: #666;
+  font-style: italic;
+  font-weight: bold;
+  border-bottom: 2px solid #222;
+  display: inline-block;
+  margin: 0;
+}
+"
+`;
+
+exports[`scoped-css-loader without scopeId style.scss 1`] = `
+"html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+  color: #666;
+}
+"
+`;
