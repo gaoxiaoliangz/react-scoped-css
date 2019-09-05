@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`babel-plugin-react-scoped-css frag.jsx 1`] = `
+"import React from 'react';
+import \\"./frag.scoped.css?scopeId=706f09b9\\";
+
+const Frag = () => {
+  return <div data-v-706f09b9={\\"\\"}>
+      <React.Fragment>
+        <div className=\\"test-frag\\" data-v-706f09b9={\\"\\"}></div>
+      </React.Fragment>
+      <>
+        <div data-v-706f09b9={\\"\\"}>text</div>
+      </>
+    </div>;
+};
+
+export default Frag;"
+`;
+
+exports[`babel-plugin-react-scoped-css from-example.jsx 1`] = `
+"import React from 'react';
+import styled from 'styled-components';
+import styles from \\"./Content.scoped.scss?scopeId=ba68a76e\\";
+import Grid from './Grid';
+import GridForwardProps from './GridForwardProps';
+const Text = styled.div\`
+  color: #666;
+\`;
+
+const FromExample = props => {
+  return <div className=\\"content\\" data-v-ba68a76e={\\"\\"}>
+      <h3 data-v-ba68a76e={\\"\\"}>Styling html tags</h3>
+      <p data-v-ba68a76e={\\"\\"}>p tag with style</p>
+
+      <React.Fragment>
+        <div data-v-ba68a76e={\\"\\"}>
+          <p data-v-ba68a76e={\\"\\"}>content wrapped with React Fragment should be fine</p>
+        </div>
+      </React.Fragment>
+
+      <h3 data-v-ba68a76e={\\"\\"}>Using classes</h3>
+      <div className=\\"grid\\" data-v-ba68a76e={\\"\\"} />
+      <div className=\\"grid\\" data-v-ba68a76e={\\"\\"} />
+
+      <h3 data-v-ba68a76e={\\"\\"}>Styling child components with css modules</h3>
+      <Grid className={styles.grid} data-v-ba68a76e={\\"\\"} />
+      <Grid className={styles.grid} data-v-ba68a76e={\\"\\"} />
+
+      <h3 data-v-ba68a76e={\\"\\"}>Styling child components which forward data-v attributes to its root element</h3>
+      <GridForwardProps className=\\"content-grid\\" data-v-ba68a76e={\\"\\"} />
+      <GridForwardProps className=\\"content-grid\\" data-v-ba68a76e={\\"\\"} />
+
+      <h3 data-v-ba68a76e={\\"\\"}>Styling with styled-components</h3>
+      <Text className=\\"text\\" data-v-ba68a76e={\\"\\"}>Some content in styled-components</Text>
+    </div>;
+};
+
+export default Content;"
+`;

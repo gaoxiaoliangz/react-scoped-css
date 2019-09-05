@@ -1,0 +1,29 @@
+.content /deep/ .grid {
+  margin-right: 5px;
+}
+
+.text {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.grid-layout {
+  margin-right: 5px;
+}
+
+.grid {
+  margin-right: 5px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: rgb(48, 157, 207);
+}
+
+p {
+  color: #666;
+  font-style: italic;
+  font-weight: bold;
+  border-bottom: 2px solid #222;
+  display: inline-block;
+  margin: 0;
+}
