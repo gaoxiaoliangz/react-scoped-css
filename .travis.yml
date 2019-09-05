@@ -1,0 +1,8 @@
+language: node_js
+
+before_install:
+  - npm install
+  - npm run test
+
+node_js:
+  - 'stable'
