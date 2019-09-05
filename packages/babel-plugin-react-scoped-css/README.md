@@ -1,4 +1,4 @@
-# React scoped CSS
+# React scoped CSS ![](https://api.travis-ci.org/gaoxiaoliangz/react-scoped-css.svg?branch=master)
 
 CSS encapsulation solution for React
 

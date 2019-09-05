@@ -1,4 +1,4 @@
-# craco-plugin-scoped-css
+# craco-plugin-scoped-css ![](https://api.travis-ci.org/gaoxiaoliangz/react-scoped-css.svg?branch=master)
 
 This is a craco plugin that adds scoped css support to create-react-app version >= 2 (this package is part of [react scoped css solution](https://github.com/gaoxiaoliangz/react-scoped-css))
 
