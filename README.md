@@ -136,3 +136,47 @@ That's it for the configuration.
 ## Some common use cases with react scoped css
 
 Check out [simple-scoped-css-example](https://github.com/gaoxiaoliangz/react-scoped-css/tree/master/examples/simple)
+
+## Common errors
+
+### Fragment : Invalid prop data-v-xxxxxxxx supplied to React.Fragment
+
+`react-scoped-css` won't add data-v attribute to `<></>` or `<React.Fragment></React.Fragment>`. But it won't know for sure that `<Fragment>` is a react fragment and assigned `data-v-` to it ([related issue](https://github.com/gaoxiaoliangz/react-scoped-css/issues/2))
+
+Invalid code
+```jsx
+import React, { Fragment } from 'react'
+
+export function MyComponent() {
+  return (
+    <Fragment>
+      ...
+    </Fragment>
+  )
+}
+```
+
+Valid code
+```jsx
+import React from 'react'
+
+export function MyComponent() {
+  return (
+    <>
+      ...
+    </>
+  )
+}
+```
+
+```jsx
+import React from 'react'
+
+export function MyComponent() {
+  return (
+    <React.Fragment>
+      ...
+    </React.Fragment>
+  )
+}
+```
