@@ -7,7 +7,8 @@
     "pub": "yarn lerna publish",
     "test": "jest",
     "test:update-snapshot": "jest --updateSnapshot",
-    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand"
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
+    "format": "prettier --write \"packages/**/*.js\""
   },
   "repository": "https://github.com/gaoxiaoliangz/react-scoped-css",
   "devDependencies": {

@@ -22,7 +22,10 @@ describe('babel-plugin-react-scoped-css', () => {
       const codeContent = fs.readFileSync(fixture.path, {
         encoding: 'utf8',
       })
-      const { code } = babel.transform(codeContent, { plugins: [plugin], filename: fixture.filename })
+      const { code } = babel.transform(codeContent, {
+        plugins: [plugin],
+        filename: fixture.filename,
+      })
       expect(code).toMatchSnapshot()
     })
   })
