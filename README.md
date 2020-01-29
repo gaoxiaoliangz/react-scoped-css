@@ -122,7 +122,7 @@ and in your webpack.config.js
         importLoaders: 2,
       },
     },
-    // You have to put in after `css-loader` and before any `pre-precessing loader`
+    // You have to put it after `css-loader` and before any `pre-precessing loader`
     { loader: 'scoped-css-loader' },
     {
       loader: 'sass-loader',
