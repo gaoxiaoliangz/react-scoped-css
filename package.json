@@ -13,7 +13,8 @@
   "repository": "https://github.com/gaoxiaoliangz/react-scoped-css",
   "devDependencies": {
     "jest": "^24.9.0",
-    "lerna": "^3.16.4"
+    "lerna": "^3.16.4",
+    "prettier": "^1.19.1"
   },
   "workspaces": [
     "packages/*",
