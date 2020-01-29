@@ -90,7 +90,7 @@ also note that you can define your own matching rule like this
   [
     "babel-plugin-react-scoped-css",
     {
-      "include": ".local.(sa|sc|c)ss$"
+      "include": ".local.(sa|sc|c|le)ss$"
     }
   ]
 ]
@@ -98,7 +98,21 @@ also note that you can define your own matching rule like this
 
 If you have other plugins installed, just add it to the list, order doesn't matter.
 
-Note: this plugin accepts `include`(RegExp, which defaults to `/\.scoped\.(sa|sc|c)ss$/`) to config which css file to be identified as scoped.
+Note: this plugin accepts `include`(RegExp, which defaults to `/\.scoped\.(sa|sc|c|le)ss$/`) to config which css file to be identified as scoped.
+
+**use less with antd**
+
+`@craco/antd` is recommended,introduction [here](https://github.com/DocSpring/craco-antd)
+
+Remember to use `{plugin: require('craco-plugin-scoped-css')}` at the end when using with `@craco/antd` plugin
+
+like this 
+```
+ plugins: [
+    { plugin: require("craco-antd") },
+    { plugin: require("craco-plugin-scoped-css") }
+  ]
+```
 
 **the webpack loader**
 
@@ -110,7 +124,7 @@ and in your webpack.config.js
 
 ```js
 {
-  test: /\.(sc|c|sa)ss$/,
+  test: /\.(sc|c|sa|le)ss$/,
   use: [
     {
       loader: 'style-loader',
