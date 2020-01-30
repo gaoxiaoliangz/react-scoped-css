@@ -47,10 +47,7 @@ module.exports = function({ types: t }) {
         path.node.source.value = `${path.node.source.value}?scopeId=${hash}`
       },
       JSXElement(path, stats) {
-        if (
-          !this.hasScopedCss ||
-          path.node.openingElement.name.type === 'JSXMemberExpression'
-        ) {
+        if (!this.hasScopedCss || path.node.openingElement.name.type === 'JSXMemberExpression') {
           return
         }
         const hash = computeHash(stats.file.opts.filename)

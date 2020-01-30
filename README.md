@@ -100,19 +100,6 @@ If you have other plugins installed, just add it to the list, order doesn't matt
 
 Note: this plugin accepts `include`(RegExp, which defaults to `/\.scoped\.(sa|sc|c|le)ss$/`) to config which css file to be identified as scoped.
 
-**use less with antd**
-
-`@craco/antd` is recommended,introduction [here](https://github.com/DocSpring/craco-antd)
-
-Remember to use `{plugin: require('craco-plugin-scoped-css')}` at the end when using with `@craco/antd` plugin
-
-like this 
-```
- plugins: [
-    { plugin: require("craco-antd") },
-    { plugin: require("craco-plugin-scoped-css") }
-  ]
-```
 
 **the webpack loader**
 
@@ -152,6 +139,21 @@ That's it for the configuration.
 Check out [simple-scoped-css-example](https://github.com/gaoxiaoliangz/react-scoped-css/tree/master/examples/simple)
 
 ## Common errors
+
+
+
+### use less with antd
+
+this line `{plugin: require('craco-plugin-scoped-css')}` insert the end of plugins is Required, otherwise less havent scoped 
+
+like this 
+```
+ plugins: [
+    { plugin: require("craco-antd") },
+    { plugin: require("craco-plugin-scoped-css") }
+  ]
+```
+**note:Only if you use craco plugin (like `@craco/antd or @craco/less`) for less support**
 
 ### Fragment : Invalid prop data-v-xxxxxxxx supplied to React.Fragment
 
