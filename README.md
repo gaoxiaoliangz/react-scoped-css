@@ -153,7 +153,7 @@ like this
     { plugin: require("craco-plugin-scoped-css") }
   ]
 ```
-**note:Only if you use craco plugin (like `@craco/antd or @craco/less`) for less support**
+**note:Only if you use craco plugin (like `craco-antd or craco-less`) for less support**
 
 ### Fragment : Invalid prop data-v-xxxxxxxx supplied to React.Fragment
 
