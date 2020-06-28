@@ -1,6 +1,7 @@
 // @ts-check
 const babelPluginJsxSyntax = require('@babel/plugin-syntax-jsx').default
 const md5 = require('md5')
+const path = require('path');
 
 const getFilenameFromPath = filePath => {
   const parts = filePath.split('/')
@@ -20,13 +21,13 @@ module.exports = function({ types: t }) {
   const computedHash = {}
   let lastHash = ''
 
-  const computeHash = filePath => {
+  const computeHash = (hashSeed='',filePath) => {
     if (computedHash[filePath]) {
       return computedHash[filePath]
     }
 
-    const filename = getFilenameFromPath(filePath)
-    const hash = md5(filename + lastHash).substr(0, 8)
+    const relative = path.relative(process.cwd(),filePath)
+    const hash = md5(hashSeed + relative + lastHash).substr(0, 8)
     computedHash[filePath] = hash
     lastHash = hash
     return hash
@@ -43,14 +44,19 @@ module.exports = function({ types: t }) {
           return
         }
         this.hasScopedCss = true
-        const hash = computeHash(stats.file.opts.filename)
+        const { hashSeed } = stats.opts
+        const hash = computeHash(hashSeed,stats.file.opts.filename)
         path.node.source.value = `${path.node.source.value}?scopeId=${hash}`
       },
       JSXElement(path, stats) {
-        if (!this.hasScopedCss || path.node.openingElement.name.type === 'JSXMemberExpression') {
+        if (
+          !this.hasScopedCss ||
+          path.node.openingElement.name.type === 'JSXMemberExpression'
+        ) {
           return
         }
-        const hash = computeHash(stats.file.opts.filename)
+        const { hashSeed } = stats.opts
+        const hash = computeHash(hashSeed,stats.file.opts.filename)
         path.node.openingElement.attributes.push(
           t.jsxAttribute(
             t.jsxIdentifier(`data-v-${hash}`),
