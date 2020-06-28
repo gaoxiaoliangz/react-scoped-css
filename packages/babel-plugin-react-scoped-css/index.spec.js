@@ -23,7 +23,11 @@ describe('babel-plugin-react-scoped-css', () => {
         encoding: 'utf8',
       })
       const { code } = babel.transform(codeContent, {
-        plugins: [plugin],
+        plugins: [[
+          plugin,{
+            hashSeed : 'userSeed'
+          }
+        ]],
         filename: fixture.filename,
       })
       expect(code).toMatchSnapshot()
