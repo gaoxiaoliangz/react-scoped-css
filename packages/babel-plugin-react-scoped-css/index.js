@@ -26,7 +26,8 @@ module.exports = function({ types: t }) {
     }
 
     const filename = getFilenameFromPath(filePath)
-    const hash = md5(filename + lastHash).substr(0, 8)
+    const cwdName = getFilenameFromPath(process.cwd())
+    const hash = md5(cwdName + filename + lastHash).substr(0, 8)
     computedHash[filePath] = hash
     lastHash = hash
     return hash
