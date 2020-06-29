@@ -1,6 +1,6 @@
 {
   "name": "simple",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "private": true,
   "scripts": {
@@ -21,7 +21,7 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
-    "babel-plugin-react-scoped-css": "^1.0.0",
+    "babel-plugin-react-scoped-css": "^1.1.0",
     "css-loader": "^1.0.0",
     "node-sass": "^4.9.4",
     "sass-loader": "^7.1.0",

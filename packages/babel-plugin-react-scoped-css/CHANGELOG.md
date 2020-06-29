@@ -9,24 +9,3 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Features
 
 * add hashSeed config in babel-plugin-react-scoped-css plugin ([#28](https://github.com/gaoxiaoliangz/react-scoped-css/issues/28)) ([8fbefc5](https://github.com/gaoxiaoliangz/react-scoped-css/commit/8fbefc5))
-
-
-
-
-
-# Changelog
-
-## v1.0.0 (2019-09-05)
-
-- added tests
-- updated docs
-
-## v0.4.0 (2019-08-19)
-
-- added craco plugin
-- added CRA example
-- updated docs
-
-## v0.3.2
-
-- added support for `.sass` files
