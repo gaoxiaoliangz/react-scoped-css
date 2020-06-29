@@ -98,7 +98,10 @@ also note that you can define your own matching rule like this
 
 If you have other plugins installed, just add it to the list, order doesn't matter.
 
-Note: this plugin accepts `include`(RegExp, which defaults to `/\.scoped\.(sa|sc|c)ss$/`) to config which css file to be identified as scoped.
+Plugin options:
+
+- `include`(optional, RegExp, defaults to `/\.scoped\.(sa|sc|c)ss$/`): config which css file to be identified as scoped
+- `hashSeed` (optional, string): used to calculate attribute hash. (TODO: a better explanation)
 
 **the webpack loader**
 
@@ -180,3 +183,9 @@ export function MyComponent() {
   )
 }
 ```
+
+## TODOs
+
+- [ ] add Chinese docs
+- [ ] add seprated docs for each package
+- [ ] a better getting started guide
