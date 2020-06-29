@@ -8,7 +8,8 @@
     "test": "jest",
     "test:update-snapshot": "jest --updateSnapshot",
     "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
-    "format": "prettier --write \"packages/**/*.js\""
+    "format": "prettier --write \"packages/**/*.js\"",
+    "v": "yarn lerna version --conventional-commits -y"
   },
   "repository": "https://github.com/gaoxiaoliangz/react-scoped-css",
   "devDependencies": {
