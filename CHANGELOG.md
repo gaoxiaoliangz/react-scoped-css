@@ -11,11 +11,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * add hashSeed config in babel-plugin-react-scoped-css plugin ([#28](https://github.com/gaoxiaoliangz/react-scoped-css/issues/28)) ([8fbefc5](https://github.com/gaoxiaoliangz/react-scoped-css/commit/8fbefc5))
 
 
-
-
-
-# Changelog
-
 ## v1.0.0 (2019-09-05)
 
 - added tests
