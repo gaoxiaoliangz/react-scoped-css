@@ -17,8 +17,8 @@ const forPlugin = (path, stats) => {
   return filename.match(new RegExp(includeRegExp))
 }
 
+const computedHash = {}
 module.exports = function({ types: t }) {
-  const computedHash = {}
   let lastHash = ''
 
   const computeHash = (hashSeed = '', filePath) => {
