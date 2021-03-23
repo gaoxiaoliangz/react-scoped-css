@@ -39,14 +39,18 @@ const Title = props => {
 export default Title
 ```
 
-Then, in the html, component with scoped css file imported has a unique `data-v-<hash>` attribute on the html element tag, and the css selector also has a corresponding hash like `selector[data-v-<hash>]`. So all the styles in `Title.scoped.css` are scoped to `Title.jsx`. The output css will be something like the following.
+Then, in the html, component with scoped css file imported has a unique `data-v-<hash>` attribute on the html element tag, and the css selector also has a corresponding hash like `selector[data-v-<hash>]`. So all the styles in `Title.scoped.css` are scoped to `Title.jsx`. The output will be something like the following.
+
+```html
+<h1 class="title" data-v-15763057=""><p data-v-15763057="">React scoped CSS</p></h1>
+```
 
 ```css
-.title[data-v-8fac5947] {
-  background: #999;
+.title[data-v-15763057] {
+  background: #309dcf;
 }
-p[data-v-8fac5947] {
-  color: #ddd;
+p[data-v-15763057] {
+  color: #fff;
 }
 ```
 
