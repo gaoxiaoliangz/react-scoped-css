@@ -1,6 +1,8 @@
-# React scoped CSS ![](https://api.travis-ci.org/gaoxiaoliangz/react-scoped-css.svg?branch=master)
+# React scoped CSS 
 
 CSS encapsulation solution for React
+
+[![npm](https://img.shields.io/npm/v/craco-plugin-scoped-css)](https://www.npmjs.com/package/babel-plugin-react-scoped-css) [![npm](https://img.shields.io/npm/dw/babel-plugin-react-scoped-css)](https://www.npmjs.com/package/babel-plugin-react-scoped-css) [![Github Repo stars](https://img.shields.io/github/stars/gaoxiaoliangz/react-scoped-css)](https://github.com/gaoxiaoliangz/react-scoped-css) [![npm](https://img.shields.io/npm/l/react-scoped-css)](https://github.com/gaoxiaoliangz/react-scoped-css/blob/master/LICENSE) ![](https://api.travis-ci.org/gaoxiaoliangz/react-scoped-css.svg?branch=master)
 
 ## Why
 
