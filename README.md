@@ -151,6 +151,37 @@ and in your webpack.config.js
 
 That's it for the configuration.
 
+### Deep selector
+
+If you want to affect the child components, you can use the deep selector.
+
+```css
+.parent /deep/ .child {
+  ...
+}
+```
+
+This will be converted to
+
+```css
+.parent[data-v-15760357] .child {
+  ...
+}
+```
+
+This method might be useful when you want to override the styles of the external libraries.
+
+However, in the recent implementation of sass (dart-sass), `/deep/` is not supported.
+You can use `::v-deep` instead. ([related issue](https://github.com/vuejs/vue-cli/issues/3399))
+
+```css
+.parent::v-deep .child {
+  ...
+}
+```
+
+When you want to use that, make sure that the version of `@vue/component-compiler-utils` installed in your project's node_modules is >= 2.6.0.
+
 ## Some common use cases with react scoped css
 
 Check out [simple-scoped-css-example](https://github.com/gaoxiaoliangz/react-scoped-css/tree/master/examples/simple)
