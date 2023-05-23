@@ -10,7 +10,7 @@
   "repository": "https://github.com/gaoxiaoliangz/react-scoped-css",
   "devDependencies": {
     "@babel/core": "^7.21.8",
-    "@babel/types": "^7.25.5",
+    "@babel/types": "^7.21.5",
     "@types/jest": "^29.5.1"
   },
   "keywords": [
