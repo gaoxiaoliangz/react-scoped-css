@@ -2,7 +2,7 @@
 const { compileStyle } = require('@vue/component-compiler-utils')
 const qs = require('qs')
 
-module.exports = function(source) {
+module.exports = function (source) {
   // @ts-ignore
   const resourceQuery = qs.parse(this.resource.split('?')[1])
   if (resourceQuery.scopeId) {

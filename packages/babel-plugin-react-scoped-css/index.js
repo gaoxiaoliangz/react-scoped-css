@@ -3,7 +3,7 @@ const babelPluginJsxSyntax = require('@babel/plugin-syntax-jsx').default
 const md5 = require('md5')
 const path = require('path')
 
-const getFilenameFromPath = filePath => {
+const getFilenameFromPath = (filePath) => {
   const parts = filePath.split('/')
   return parts[parts.length - 1].split('?')[0]
 }
@@ -18,7 +18,7 @@ const forPlugin = (path, stats) => {
 }
 
 const computedHash = {}
-module.exports = function({ types: t }) {
+module.exports = function ({ types: t }) {
   let lastHash = ''
 
   const computeHash = (hashSeed = '', filePath) => {

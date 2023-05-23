@@ -1,7 +1,7 @@
 import React from 'react'
 import './Grid.scoped.scss'
 
-const GridForwardProps = props => {
+const GridForwardProps = (props) => {
   const { className } = props
   return (
     <div {...props} className={`grid ${className ? className : ''}`}>

@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package cra
 
-
-
-
-
 # [1.1.0](https://github.com/gaoxiaoliangz/react-scoped-css/compare/v1.0.0...v1.1.0) (2020-06-29)
 
 **Note:** Version bump only for package cra

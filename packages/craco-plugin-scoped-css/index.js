@@ -1,6 +1,6 @@
 const { getLoader, loaderByName } = require('@craco/craco')
 
-const addScopedCssLoader = targetRule => {
+const addScopedCssLoader = (targetRule) => {
   const rules = targetRule.use || targetRule.loader
 
   let cssLoaderIndex = -1
@@ -36,7 +36,7 @@ module.exports = {
     }
 
     // add scoped-css-loader
-    const oneOfRule = webpackConfig.module.rules.find(rule => rule.oneOf)
+    const oneOfRule = webpackConfig.module.rules.find((rule) => rule.oneOf)
     if (!oneOfRule) {
       return console.log(
         "Can't find a 'oneOf' rule under module.rules in the " + `${env} webpack config!`,
@@ -45,7 +45,7 @@ module.exports = {
     }
 
     const cssRule = oneOfRule.oneOf.find(
-      rule =>
+      (rule) =>
         rule.test &&
         rule.test.toString().includes('.css$') &&
         rule.test.toString().indexOf('.module') === -1,
@@ -59,7 +59,7 @@ module.exports = {
     }
 
     const sassRule = oneOfRule.oneOf.find(
-      rule =>
+      (rule) =>
         rule.test &&
         rule.test.toString().includes('scss|sass') &&
         rule.test.toString().indexOf('.module') === -1,

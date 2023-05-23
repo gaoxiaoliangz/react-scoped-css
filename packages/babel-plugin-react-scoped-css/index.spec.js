@@ -8,7 +8,7 @@ const readFixtures = () => {
   const dir = path.resolve(__dirname, './fixtures')
   const files = fs.readdirSync(dir)
 
-  return files.map(f => {
+  return files.map((f) => {
     return {
       filename: f,
       path: path.resolve(dir, f),
@@ -17,7 +17,7 @@ const readFixtures = () => {
 }
 
 describe('babel-plugin-react-scoped-css', () => {
-  readFixtures().forEach(fixture => {
+  readFixtures().forEach((fixture) => {
     it(fixture.filename, () => {
       const codeContent = fs.readFileSync(fixture.path, {
         encoding: 'utf8',

@@ -10,7 +10,7 @@ const Text = styled.div`
   color: #666;
 `
 
-const Content = props => {
+const Content = (props) => {
   return (
     <div className="content">
       <h3>Styling html tags</h3>

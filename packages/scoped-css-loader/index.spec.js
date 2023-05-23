@@ -8,7 +8,7 @@ const readFixtures = () => {
   const dir = path.resolve(__dirname, './fixtures')
   const files = fs.readdirSync(dir)
 
-  return files.map(f => {
+  return files.map((f) => {
     return {
       filename: f,
       path: path.resolve(dir, f),
@@ -18,7 +18,7 @@ const readFixtures = () => {
 
 describe('scoped-css-loader', () => {
   describe('with scopeId', () => {
-    readFixtures().forEach(fixture => {
+    readFixtures().forEach((fixture) => {
       it(fixture.filename, async () => {
         const output = mockCompiler(fixture, loader)
         expect(output).toMatchSnapshot()
@@ -27,9 +27,9 @@ describe('scoped-css-loader', () => {
   })
 
   describe('without scopeId', () => {
-    readFixtures().forEach(fixture => {
+    readFixtures().forEach((fixture) => {
       it(fixture.filename, async () => {
-        const output = mockCompiler(fixture, loader, filename => filename)
+        const output = mockCompiler(fixture, loader, (filename) => filename)
         expect(output).toMatchSnapshot()
       })
     })
