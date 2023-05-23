@@ -1,5 +1,5 @@
 .content {
-  /deep/ :local(.grid) {
+  :deep(:local(.grid)) {
     margin-right: 5px;
   }
 }

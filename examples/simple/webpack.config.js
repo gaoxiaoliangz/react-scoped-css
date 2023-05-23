@@ -8,7 +8,7 @@ module.exports = {
     path: path.join(__dirname, 'dist/app'),
   },
   mode: 'development',
-  devtool: 'sourcemap',
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -27,7 +27,9 @@ module.exports = {
             options: {
               sourceMap: true,
               importLoaders: 2,
-              localIdentName: '[local]--[hash:base64:5]',
+              modules: {
+                localIdentName: '[local]--[hash:base64:5]',
+              },
             },
           },
           { loader: 'scoped-css-loader' },
