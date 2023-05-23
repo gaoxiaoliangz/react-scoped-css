@@ -22,7 +22,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-react-scoped-css": "^1.1.1",
-    "css-loader": "^1.0.0",
+    "css-loader": "^6.7.4",
     "sass": "^1.62.1",
     "sass-loader": "^7.1.0",
     "scoped-css-loader": "^1.0.0",

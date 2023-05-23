@@ -5,10 +5,11 @@
   "dependencies": {
     "@craco/craco": "^5.6.3",
     "craco-plugin-scoped-css": "^1.1.1",
-    "sass": "^1.62.1",
+    "css-loader": "6.7.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.3.1"
+    "react-scripts": "^5.0.1",
+    "sass": "^1.62.1"
   },
   "scripts": {
     "start": "craco start",
