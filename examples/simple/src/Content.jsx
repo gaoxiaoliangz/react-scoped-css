@@ -1,16 +1,16 @@
-import React from 'react'
-import styled from 'styled-components'
-import styles from './Content.scoped.scss'
-import Grid from './Grid'
-import GridForwardProps from './GridForwardProps'
-import { Text as TextA } from './TextA/Text'
-import { Text as TextB } from './TextB/Text'
+import React from "react";
+import styled from "styled-components";
+import styles from "./Content.scoped.scss";
+import Grid from "./Grid";
+import GridForwardProps from "./GridForwardProps";
+import { Text as TextA } from "./TextA/Text";
+import { Text as TextB } from "./TextB/Text";
 
 const Text = styled.div`
   color: #666;
-`
+`;
 
-const Content = props => {
+const Content = (props) => {
   return (
     <div className="content">
       <h3>Styling html tags</h3>
@@ -30,7 +30,10 @@ const Content = props => {
       <Grid className={styles.grid} />
       <Grid className={styles.grid} />
 
-      <h3>Styling child components which forward data-v attributes to its root element</h3>
+      <h3>
+        Styling child components which forward data-v attributes to its root
+        element
+      </h3>
       <GridForwardProps className="content-grid" />
       <GridForwardProps className="content-grid" />
 
@@ -41,7 +44,7 @@ const Content = props => {
       <TextA />
       <TextB />
     </div>
-  )
-}
+  );
+};
 
-export default Content
+export default Content;
