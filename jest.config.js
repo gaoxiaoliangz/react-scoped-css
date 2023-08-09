@@ -1,3 +1,3 @@
 module.exports = {
-  modulePathIgnorePatterns: ['examples/*'],
-}
+  modulePathIgnorePatterns: ["examples/*"],
+};
