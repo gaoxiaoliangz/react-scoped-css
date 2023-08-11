@@ -151,7 +151,7 @@ and in your webpack.config.js
 
 That's it for the configuration.
 
-### Deep selector
+### About the deep selector
 
 If you want to affect the child components, you can use the deep selector.
 
@@ -182,9 +182,10 @@ You can use `::v-deep` instead. ([related issue](https://github.com/vuejs/vue-cl
 
 When you want to use that, make sure that the version of `@vue/component-compiler-utils` installed in your project's node_modules is >= 2.6.0.
 
-## Some common use cases with react scoped css
+## Examples
 
-Check out [simple-scoped-css-example](https://github.com/gaoxiaoliangz/react-scoped-css/tree/master/examples/simple)
+- [webpack example](examples/simple)
+- [create react app example](examples/cra)
 
 ## Common errors
 
@@ -230,8 +231,3 @@ export function MyComponent() {
 }
 ```
 
-## TODOs
-
-- [ ] add Chinese docs
-- [ ] add seprated docs for each package
-- [ ] a better getting started guide
