@@ -5,9 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@vue/component-compiler-utils": "^2.2.0",
-    "loader-utils": "^1.1.0",
-    "qs": "^6.5.2",
-    "schema-utils": "^1.0.0"
+    "qs": "^6.5.2"
   },
   "repository": "https://github.com/gaoxiaoliangz/react-scoped-css",
   "keywords": [
