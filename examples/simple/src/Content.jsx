@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import styles from "./Content.scoped.scss";
 import Grid from "./Grid";
-import GridForwardProps from "./GridForwardProps";
 import { Text as TextA } from "./TextA/Text";
 import { Text as TextB } from "./TextB/Text";
+import "./Content.scoped.scss";
 
 const Text = styled.div`
-  color: #666;
+  color: green;
 `;
 
 const Content = (props) => {
@@ -26,16 +25,12 @@ const Content = (props) => {
       <div className="grid" />
       <div className="grid" />
 
-      <h3>Styling child components with css modules</h3>
-      <Grid className={styles.grid} />
-      <Grid className={styles.grid} />
-
       <h3>
         Styling child components which forward data-v attributes to its root
         element
       </h3>
-      <GridForwardProps className="content-grid" />
-      <GridForwardProps className="content-grid" />
+      <Grid className="content-grid" />
+      <Grid className="content-grid" />
 
       <h3>Styling with styled-components</h3>
       <Text className="text">Some content in styled-components</Text>
