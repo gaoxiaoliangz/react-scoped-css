@@ -1,14 +1,16 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: {
     main: "./src/index.js",
   },
   output: {
-    path: path.join(__dirname, "dist/app"),
+    path: path.join(__dirname, "dist"),
   },
   mode: "development",
-  devtool: "sourcemap",
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -24,21 +26,32 @@ module.exports = {
           },
           {
             loader: "css-loader",
-            options: {
-              sourceMap: true,
-              importLoaders: 2,
-              localIdentName: "[local]--[hash:base64:5]",
-            },
           },
-          { loader: "scoped-css-loader" },
           {
-            loader: "sass-loader",
+            loader: "scoped-css-loader",
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: ["postcss-nested"],
+              },
+            },
           },
         ],
       },
     ],
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: "index.html",
+    }),
+  ],
   resolve: {
-    extensions: [".wasm", ".mjs", ".js", ".json", ".jsx"],
+    extensions: [".mjs", ".js", ".json", ".jsx"],
+  },
+  devServer: {
+    port: 8080,
   },
 };

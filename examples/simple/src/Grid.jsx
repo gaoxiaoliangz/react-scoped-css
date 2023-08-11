@@ -4,7 +4,9 @@ import "./Grid.scoped.scss";
 const Grid = (props) => {
   const { className } = props;
   return (
-    <div className={`grid ${className ? className : ""}`}>{props.children}</div>
+    <div {...props} className={`grid ${className ? className : ""}`}>
+      {props.children}
+    </div>
   );
 };
 
