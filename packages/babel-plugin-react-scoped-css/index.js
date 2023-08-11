@@ -18,7 +18,7 @@ const forPlugin = (path, stats) => {
 };
 
 const computedHash = {};
-module.exports = function({ types: t }) {
+module.exports = function ({ types: t }) {
   let lastHash = "";
 
   const computeHash = (hashSeed = "", filePath) => {
