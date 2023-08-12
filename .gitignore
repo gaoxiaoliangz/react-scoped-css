@@ -3,3 +3,4 @@ dist
 package-lock.json
 yarn-error.log
 .vscode
+.DS_Store
