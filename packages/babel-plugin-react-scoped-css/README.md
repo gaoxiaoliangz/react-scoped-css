@@ -99,6 +99,16 @@ also note that you can define your own matching rule like this
 If you have other plugins installed, just add it to the list, order doesn't matter.
 
 Note: this plugin accepts `include`(RegExp, which defaults to `/\.scoped\.(sa|sc|c)ss$/`) to config which css file to be identified as scoped.
+Note: this plugin accepts `ignoreNode` to config which Node to be ignore. eg React.Fragment config 
+```js
+const ignoreNode = (node) => {
+    if(node.openingElement.name.name === 'Fragment') return true;
+    if(node.openingElement.name.type === 'JSXMemberExpression' 
+      && node.openingElement.name.object.name === 'React'
+      && node.openingElement.name.property.name === 'Fragment' )  return true;
+    return false;
+};
+``` 
 
 **the webpack loader**
 
