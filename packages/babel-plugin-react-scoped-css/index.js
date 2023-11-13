@@ -49,9 +49,12 @@ module.exports = function ({ types: t }) {
         path.node.source.value = `${path.node.source.value}?scopeId=${hash}`;
       },
       JSXElement(path, stats) {
+        const { ignoreNode } = stats.opts;
+        // ignoreNode 可以让用户自定义哪些节点不添加约束，比如 React.Fragment 添加额外属性会报warn或error
         if (
           !this.hasScopedCss ||
-          path.node.openingElement.name.type === "JSXMemberExpression"
+          (typeof ignoreNode === 'function' ? ignoreNode(path.node, stats) : path.node.openingElement.name.type === "JSXMemberExpression")
+          
         ) {
           return;
         }
